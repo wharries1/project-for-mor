@@ -4,38 +4,24 @@
   "info": {
     "singularName": "order",
     "pluralName": "orders",
-    "displayName": "Order",
-    "description": ""
+    "displayName": "Order"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "products": {
-      "type": "json"
-    },
     "stripeSessionId": {
       "type": "string"
     },
-    "email": {
-      "type": "email"
+    "products": {
+      "type": "json"
     },
     "userName": {
       "type": "string"
     },
-    "completed": {
-      "type": "boolean"
-    },
-    "image": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
+    "email": {
+      "type": "email"
     }
   }
 }
