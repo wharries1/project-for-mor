@@ -1,5 +1,5 @@
 "use strict";
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const stripe = require("stripe")(sk_test_51MeKA0Ao8puVP1WfxdlT8TEJRWccDzcPdzlStBXdbrdWq56DSeFD21Op1tOtPPlKqMuZYabosJgpI5DdOXr253PK00kjzDJiyx);
 
 /**
  * order controller
@@ -49,7 +49,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
       console.log("Order created successfully");
       
       // return the session id
-      return { id: session.id };
+      return { stripeSessionId: session.id };
     } catch (error) {
       ctx.response.status = 500;
       return { error: { message: "There was a problem creating the charge" } };
