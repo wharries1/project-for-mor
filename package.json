@@ -17,6 +17,7 @@
     "pg": "^8.10.0",
     "pg-connection-string": "^2.5.0",
     "strapi-plugin-multi-select": "^1.1.0",
+    "strapi-stripe": "^3.2.1",
     "stripe": "^11.14.0"
   },
   "author": {
