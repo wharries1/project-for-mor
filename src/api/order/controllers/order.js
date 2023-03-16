@@ -1,5 +1,5 @@
 "use strict";
-const stripe = require("stripe")(sk_test_51MeKA0Ao8puVP1WfxdlT8TEJRWccDzcPdzlStBXdbrdWq56DSeFD21Op1tOtPPlKqMuZYabosJgpI5DdOXr253PK00kjzDJiyx);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 /**
  * order controller
@@ -31,14 +31,18 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         })
       );
 
-      const session = await stripe.checkout.sessions.create({
-        payment_method_types: ["card"],
-        customer_email: email,
-        mode: "payment",
-        success_url: "http://localhost:3000/checkout/success",
-        cancel_url: "http://localhost:3000",
-        line_items: lineItems,
-      });
+      const session = await stripe.checkout.sessions.retrieve(
+        'cs_test_a1Xvbbeu94SmDvdoaSngad6lFVqVcxSO5BxjlMDfKMG0APJh4fMt7qjRsU'
+      );
+
+      // const session = await stripe.checkout.sessions.create({
+      //   payment_method_types: ["card"],
+      //   customer_email: email,
+      //   mode: "payment",
+      //   success_url: "http://localhost:3000/checkout/success",
+      //   cancel_url: "http://localhost:3000",
+      //   line_items: lineItems,
+      // });
       
       console.log("Session ID:", session.id);
       
