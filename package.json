@@ -11,11 +11,13 @@
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.6.1",
-    "@strapi/plugin-users-permissions": "4.6.1",
+    "@strapi/plugin-users-permissions": "^4.8.2",
     "@strapi/strapi": "4.6.1",
     "better-sqlite3": "8.0.1",
+    "heroku": "^7.3.0",
     "pg": "^8.10.0",
     "pg-connection-string": "^2.5.0",
+    "strapi-plugin-custom-api": "^1.0.4",
     "strapi-plugin-multi-select": "^1.1.0",
     "strapi-stripe": "^3.2.1",
     "stripe": "^11.14.0"
