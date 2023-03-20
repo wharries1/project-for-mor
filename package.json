@@ -17,6 +17,7 @@
     "heroku": "^7.3.0",
     "pg": "^8.10.0",
     "pg-connection-string": "^2.5.0",
+    "strapi-plugin-custom-api": "^1.0.4",
     "strapi-plugin-multi-select": "^1.1.0",
     "strapi-stripe": "^3.2.1",
     "stripe": "^11.14.0"
@@ -28,7 +29,7 @@
     "uuid": "f5dcabde-65a5-4b51-a135-959ca1d26bea"
   },
   "engines": {
-    "node": ">=14.19.1 <=18.x.x",
+    "node": "18.0.0",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
